@@ -58,7 +58,7 @@ function TodoListCard() {
             {items.map(item => (
                 <ItemDisplay
                     item={item}
-		    disable
+		    disabled
                     key={item.id}
                     onItemUpdate={onItemUpdate}
                     onItemRemoval={onItemRemoval}
@@ -97,7 +97,7 @@ function AddItemForm({ onNewItem }) {
                     value={newItem}
                     onChange={e => setNewItem(e.target.value)}
                     type="text"
-		    disable
+		    disabled
                     placeholder="New Item"
                     aria-describedby="basic-addon1"
                 />
@@ -105,7 +105,7 @@ function AddItemForm({ onNewItem }) {
                     <Button
                         type="submit"
                         variant="success"
-			disable
+			disabled
                         disabled={!newItem.length}
                         className={submitting ? 'disabled' : ''}
                     >
@@ -146,7 +146,7 @@ function ItemDisplay({ item, onItemUpdate, onItemRemoval }) {
                     <Button
                         className="toggles"
                         size="sm"
-			disable
+			disabled
                         variant="link"
                         onClick={toggleCompletion}
                         aria-label={
@@ -168,7 +168,7 @@ function ItemDisplay({ item, onItemUpdate, onItemRemoval }) {
                 <Col xs={1} className="text-center remove">
                     <Button
                         size="sm"
-			disable
+			disabled
                         variant="link"
                         onClick={removeItem}
                         aria-label="Remove Item"
