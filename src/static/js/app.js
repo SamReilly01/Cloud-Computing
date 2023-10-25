@@ -168,10 +168,10 @@ function ItemDisplay({ item, onItemUpdate, onItemRemoval }) {
                 <Col xs={1} className="text-center remove">
                     <Button
                         size="sm"
-			disabled
                         variant="link"
                         onClick={removeItem}
                         aria-label="Remove Item"
+			disabled
                     >
                         <i className="fa fa-trash text-danger" />
                     </Button>
